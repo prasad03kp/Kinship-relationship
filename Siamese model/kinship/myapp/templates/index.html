@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kinship Verification</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/aos.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/ionicons.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" href="{% static 'css/jquery.timepicker.css' %}">
+
+    
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/icomoon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
+   </head>
+  <body>
+    <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="background:#BCC6CC;">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Upload Image</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          <form method="POST" enctype="multipart/form-data" action = "predictimage">
+            {% csrf_token %}
+          <div class="form-group">
+            <fieldset style="align-content: center;font-size: 20px;">
+            <label for="recipient-name" class="col-form-label">Insert 1st Image:</label>
+            <input type="file" name="image1" class="form-control" id="image1"  required/>
+          </fieldset>
+          </div>
+  
+          <div class="form-group">
+            <fieldset style="align-content: center;font-size: 20px;">
+            <label for="recipient-name" class="col-form-label">Insert 2nd Image:</label>
+            <input type="file" name="image2" class="form-control" id="image2" required/>
+          </fieldset>
+          </div>
+         
+  
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn-lg btn-primary">Submit</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>
+  
+    <section class="home-slider owl-carousel" >
+      <div class="slider-item" style="background-image: url(static/images/famm.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            <HEADER>
+              <h1 class="mb-4" style="font-size: 60px;">KINSHIP VERIFIER</h1>
+            </HEADER>
+             
+              <span class="subheading" style="font-size: 40px; color:#000000;font-family: cursive;">Wish To Find Out If Two People Are Related?
+                Upload Your Photos & Find Out.</span>
+              <p>  <div class="text-center">
+                <a href="" class="btn-lg btn-primary" data-toggle="modal" data-target="#modalLoginForm">CLICK HERE</a>
+              </div> </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="slider-item" style="background-image: url(static/images/fams.jpg);">
+      	<div class="overlay"></div>
+        <div class="container">
+          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
+
+            <div class="col-md-8 col-sm-12 text-center ftco-animate">
+            <HEADER>
+              <h1 class="mb-4" style="font-size: 60px;">KINSHIP VERIFIER</h1>
+            </HEADER>
+             
+              <span class="subheading" style="font-size: 40px; color:black;font-family: cursive;">Wish To Find Out If Two People Are Related?
+                Upload Your Photos & Find Out.</span>
+              <p> 
+                <div class="text-center">
+                  <a href="" class="btn-lg btn-primary" data-toggle="modal" data-target="#modalLoginForm">CLICK HERE</a>
+                </div> </p>
+            </div>
+          
+          </div>
+        
+
+        </div>
+      </div>
+
+      
+    </section>
+   
+    <section class="ftco-about d-md-flex">
+    	<div class="one-half img" style="background-image: url(static/images/images_1.jpeg);"></div>
+    	<div class="one-half ftco-animate "style="background-color:rgb(20,20,20);">
+    		<div class="overlap">
+	        <div class="heading-section ftco-animate ">
+	        
+	        </div>
+	        <div>
+	  				<h2 style="color:rgb(243, 239, 239)"><strong>Kinship verification from facial images is an interesting and challenging problem. </strong></h2>
+            <p style="color: rgb(251, 218, 218) ;font-size:20px;" ><strong> This website brings you 
+              a platform to compare photos of two people you wish to,all at the click of a single button. All you gotta do is upload the photos and see the magic for yourself.
+                      </strong> 
+                 </p>
+                    
+          </div>
+  			</div>
+    	</div>
+    </section>
+    <section class="ftco-counter ftco-bg-dark img" id="section-counter" style="background-image: url(static/images/famm.jpg);" data-stellar-background-ratio="0.5">
+			<div class="overlay"></div>
+    </section>
+
+    <section class="ftco-section" style="background-image: url(images/bg_4.jpg);">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-12 heading-section ftco-animate text-center">
+            <span class="subheading">Developed By</span>
+          </div>
+        </div>
+       <div class="row">
+        <div class="col-md-2.5 item" style="text-align: center;color:antiquewhite;">
+          <h3 style="font-family: cursive;">Krishna Prasad P</h3>
+          <h5 style="font-family: cursive;"> <img src="{%static 'images/svg/gmail1.png'%}" alt="loc" width="15" height="15">    prasad03kp@gmail.com</h5>
+        </div>
+        <div class="col-md-4 item" style="text-align: center;color:antiquewhite;">
+          <h3  style="font-family: cursive;">Keerthana Rajeev</h3>
+          <h5  style="font-family: cursive;"><img src="{%static 'images/svg/gmail1.png'%}" alt="loc" width="15" height="15"> keerthana.rajeev100@gmail.com</h5>
+        </div>
+        <div class="col-md-3 item" style="text-align: center;color:antiquewhite;">
+          <h3  style="font-family: cursive;">Maithri</h3>
+          <h5  style="font-family: cursive;"><img src="{%static 'images/svg/gmail1.png'%}" alt="loc" width="15" height="15"> rmaithri21@gmail.com</h5>
+        </div>
+        <div class="col-md-2.5 item" style="text-align: center;color:antiquewhite;">
+          <h3  style="font-family: cursive;">Nischal S P</h3>
+          <h5  style="font-family: cursive;"><img src="{%static 'images/svg/gmail1.png'%}" alt="loc" width="15" height="15"> nischalspm@gmail.com</h5>
+        </div>
+        </div>
+      </div>
+        
+         
+    
+    </section>
+   
+   
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery-migrate-3.0.1.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+  <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+  <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+  <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/aos.js' %}"></script>
+  <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap-datepicker.js' %}"></script>
+  <script src="{% static 'js/jquery.timepicker.min.js' %}"></script>
+  <script src="{% static 'js/scrollax.min.js' %}"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="{% static 'js/google-map.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+    
+  </body>
+</html>
